@@ -2,7 +2,7 @@
   "name": "bestdit",
   "version": "0.0.1",
   "description": "The best content from Reddit showcased in one app.",
-  "productName": "Bestdit",
+  "productName": "Bestdit - The best content from Reddit showcased in one app.",
   "author": "Nuno Góis <github@nunogois.com>",
   "private": true,
   "scripts": {
@@ -24,9 +24,14 @@
     "@typescript-eslint/eslint-plugin": "^4.16.1",
     "@typescript-eslint/parser": "^4.16.1",
     "babel-eslint": "^10.0.1",
+    "devtron": "^1.4.0",
+    "electron": "^9.0.0",
+    "electron-debug": "^3.0.1",
+    "electron-devtools-installer": "^3.0.0",
     "eslint": "^7.21.0",
     "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-vue": "^7.7.0"
+    "eslint-plugin-vue": "^7.7.0",
+    "workbox-webpack-plugin": "^5.0.0"
   },
   "browserslist": [
     "last 10 Chrome versions",

@@ -4,5 +4,7 @@ export default {
     share: 'Share',
     clipboard: 'Copied to clipboard!'
   },
-  drawer: {}
+  drawer: {
+    github_caption: 'Check out this project on GitHub!'
+  }
 }

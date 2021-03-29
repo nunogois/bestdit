@@ -1,0 +1,7 @@
+{
+  "appId": "com.bestdit.app",
+  "appName": "Bestdit",
+  "bundledWebRuntime": false,
+  "npmClient": "yarn",
+  "webDir": "www"
+}

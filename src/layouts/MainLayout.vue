@@ -39,7 +39,7 @@
         <q-item
           clickable
           tag="a"
-          href="https://github.com/nunogois"
+          href="https://github.com/nunogois/bestdit"
           target="_blank"
         >
           <q-item-section avatar>
@@ -48,7 +48,7 @@
           <q-item-section>
             <q-item-label>GitHub</q-item-label>
             <q-item-label caption>
-              Check out this project on GitHub!
+              {{ $t('drawer.github_caption') }}
             </q-item-label>
           </q-item-section>
         </q-item>

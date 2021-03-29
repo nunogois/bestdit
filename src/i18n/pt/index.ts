@@ -1,7 +1,10 @@
 export default {
   post: {
-    reddit: 'Open on Reddit',
-    share: 'Share',
-    clipboard: 'Copied to clipboard!'
+    reddit: 'Abrir no Reddit',
+    share: 'Partilhar',
+    clipboard: 'Copiado para a área de transferência!'
+  },
+  drawer: {
+    github_caption: 'Consulte o projeto no GitHub!'
   }
 }

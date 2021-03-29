@@ -2,6 +2,8 @@
 
 The best content from Reddit showcased in one app.
 
+Check it out here: https://bestdit.vercel.app/
+
 100% cross-platform with a single codebase.
 
 Made with [Quasar Framework](https://quasar.dev/) - A [VueJS](https://vuejs.org/) framework.
@@ -11,6 +13,12 @@ Made with [Quasar Framework](https://quasar.dev/) - A [VueJS](https://vuejs.org/
 - Dark mode
 - Infinite scroll
 - Pull down to refresh
+
+## Builds
+
+- PWA (Progressive Web App - Web app that anyone can optionally install through the browser)
+- Capacitor (Mobile - Android, iOS)
+- Electron (Desktop - Windows, Linux, MacOS)
 
 ## Using
 
@@ -37,13 +45,19 @@ Made with [Quasar Framework](https://quasar.dev/) - A [VueJS](https://vuejs.org/
 - [x] Infinite scroll
 - [x] Pull down to refresh
 - [x] Vue-i18n (EN + PT)
+- [x] App icon
+- [x] Add meta tags
+- [x] GitHub repo
+- [ ] Setup builds (PWA, Windows, Android, etc)
 - [ ] Welcome page
+- [ ] Add options to user drawer (on the right)
 - [ ] Local storage
+- [ ] Configure subreddits
+- [ ] Like / favorite
+- [ ] Show favorites
 - [ ] Virtual scroll?
 - [ ] Share component
 - [ ] Auth
-- [ ] Setup builds (PWA, Windows, Android, etc)
-- [ ] GitHub repo
 
 ## Install the dependencies
 

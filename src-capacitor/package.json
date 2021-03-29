@@ -1,0 +1,11 @@
+{
+  "name": "bestdit",
+  "version": "0.0.1",
+  "description": "The best content from Reddit showcased in one app.",
+  "author": "Nuno Góis <github@nunogois.com>",
+  "private": true,
+  "dependencies": {
+    "@capacitor/cli": "^2.0.0",
+    "@capacitor/core": "^2.0.0"
+  }
+}

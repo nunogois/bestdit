@@ -3,5 +3,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "skipLibCheck": true
-  }
+  },
+  "exclude": [
+    "src-electron"
+  ]
 }

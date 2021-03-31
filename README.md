@@ -71,4 +71,4 @@ I will only build for Windows because that's the platform I'm using at the momen
 - [ ] Virtual scroll?
 - [ ] Share component
 - [ ] Auth
-- [ ] Advanced video support
+- [ ] Advanced posts support (better embed support for some posts, etc)

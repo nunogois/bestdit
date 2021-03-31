@@ -36,6 +36,16 @@
           scrolling="no"
           allowfullscreen
         />
+        <iframe
+          v-if="post.url.includes('gfycat')"
+          :src="post.url.replace('gfycat.com', 'gfycat.com/ifr')"
+          :title="post.title"
+          height="512"
+          class="full-width"
+          frameborder="0"
+          scrolling="no"
+          allowfullscreen
+        />
         <video
           v-else-if="
             post.is_video ||

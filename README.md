@@ -24,8 +24,7 @@ Check [releases](https://github.com/nunogois/bestdit/releases).
 
 ### [PWA (Progressive Web App - Web app that anyone can optionally install through the browser)](https://quasar.dev/quasar-cli/developing-pwa/introduction)
 
-<img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/chrome_pwa.jpg?raw=true" height="400" alt="Bestdit PWA on Google Chrome" />
-<img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/chrome_mobile_pwa.jpg?raw=true" height="400" alt="Bestdit PWA on Google Chrome on mobile" />
+<img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/chrome_pwa.jpg?raw=true" height="400" alt="Bestdit PWA on Google Chrome" /><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/chrome_mobile_pwa.jpg?raw=true" height="400" alt="Bestdit PWA on Google Chrome on mobile" />
 
 The images show Bestdit on Google Chrome, on desktop and mobile. On the desktop screenshot, in the top right corner you can see the default option to install the PWA. On the second image you can see "Add to Home screen" at the bottom.
 

@@ -1,2 +1,2 @@
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore bestdit.keystore dist\capacitor\android\apk\release\app-release-unsigned.apk alias_name
-zipalign -v 4 dist\capacitor\android\apk\release\app-release-unsigned.apk releases\Bestdit.apk
+zipalign -v 4 dist\capacitor\android\apk\release\app-release-unsigned.apk dist\Bestdit.apk

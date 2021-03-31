@@ -20,7 +20,55 @@
         <h5 class="text-h5 q-ma-none">{{ post.title }}</h5>
       </div>
       <div>
-        <img :src="post.url" class="full-width" draggable="false" />
+        <iframe
+          v-if="post.media && post.media.type === 'youtube.com'"
+          :src="
+            post.url
+              .replace('youtu.be/', 'youtube.com/watch?v=')
+              .replace('watch?v=', 'embed/')
+              .split('&')[0]
+          "
+          :title="post.title"
+          height="512"
+          class="full-width"
+          frameborder="0"
+          sandbox="allow-forms allow-orientation-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+          scrolling="no"
+          allowfullscreen
+        />
+        <video
+          v-else-if="
+            post.is_video ||
+              ['gifv', 'mp4', 'webm'].includes(
+                urlExtension(post.url).toLowerCase()
+              )
+          "
+          preload="auto"
+          autoplay="autoplay"
+          loop="loop"
+          class="full-width"
+          draggable="false"
+          controls
+        >
+          <source
+            v-if="
+              post.url.includes('imgur') && urlExtension(post.url) === 'gifv'
+            "
+            :src="post.url.replace('.' + urlExtension(post.url), '.mp4')"
+            type="video/mp4"
+          />
+          <source
+            v-else-if="post.is_video"
+            :src="post.media.reddit_video.fallback_url"
+            type="video/mp4"
+          />
+          <source
+            v-else
+            :src="post.url"
+            :type="'video/' + urlExtension(post.url)"
+          />
+        </video>
+        <img v-else :src="post.url" class="full-width" draggable="false" />
       </div>
       <q-card-actions class="q-gutter-md q-pb-none">
         <q-btn
@@ -81,6 +129,15 @@ export default Vue.extend({
     async share(url: string) {
       await copyToClipboard(url)
       this.$q.notify(this.$t('post.clipboard'))
+    },
+    urlExtension(url: string): string {
+      return (
+        url
+          .split(/[#?]/)[0]
+          .split('.')
+          .pop()
+          ?.trim() || ''
+      )
     }
   }
 })

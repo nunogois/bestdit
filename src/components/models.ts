@@ -7,6 +7,13 @@ export interface Post {
   url: string
   score: number
   permalink: string
+  is_video: boolean
+  media: {
+    reddit_video: {
+      fallback_url: string
+    }
+    type: string
+  }
 }
 
 export interface RedditResponse {

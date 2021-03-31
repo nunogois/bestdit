@@ -45,10 +45,10 @@ export default Vue.extend({
   },
   methods: {
     async load(reset = false) {
-      const query = 'programmerhumor'
+      const query = 'ProgrammerHumor/top.json?t=all'
 
       await this.$axios
-        .get(`https://www.reddit.com/r/${query}.json${this.getAfter(reset)}`)
+        .get(`https://www.reddit.com/r/${query}${this.getAfter(reset)}`)
         .then(res => {
           const response = res.data as RedditResponse
           const posts = response.data.children
@@ -76,7 +76,7 @@ export default Vue.extend({
     },
     getAfter(reset = false) {
       if (!reset && this.posts.length) {
-        return '?after=' + this.posts[this.posts.length - 1].name
+        return '&after=' + this.posts[this.posts.length - 1].name
       }
       return ''
     }

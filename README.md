@@ -10,15 +10,27 @@ Made with [Quasar Framework](https://quasar.dev/) - A [VueJS](https://vuejs.org/
 
 ## Features
 
+- 100% cross-platform with a single open-source codebase
 - Dark mode
 - Infinite scroll
 - Pull down to refresh
+- i18n
+  - EN
+  - PT
 
 ## Builds
 
-- PWA (Progressive Web App - Web app that anyone can optionally install through the browser)
-- Capacitor (Mobile - Android, iOS)
-- Electron (Desktop - Windows, Linux, MacOS)
+### [PWA (Progressive Web App - Web app that anyone can optionally install through the browser)](https://quasar.dev/quasar-cli/developing-pwa/introduction)
+
+This is the default web app. You can "install" the PWA through the options on the right drawer.
+
+### [Capacitor (Mobile - Android, iOS)](https://quasar.dev/quasar-cli/developing-capacitor-apps/introduction)
+
+I can't build iOS apps because I don't have a Mac currently. If you have one, simply follow the steps if you wish to build the app.
+
+### [Electron (Desktop - Windows, Linux, MacOS)](https://quasar.dev/quasar-cli/developing-electron-apps/introduction)
+
+I will only build for Windows because that's the platform I'm using at the moment. Feel free to build for other platforms.
 
 ## Using
 
@@ -48,7 +60,8 @@ Made with [Quasar Framework](https://quasar.dev/) - A [VueJS](https://vuejs.org/
 - [x] App icon
 - [x] Add meta tags
 - [x] GitHub repo
-- [ ] Setup builds (PWA, Windows, Android, etc)
+- [x] Basic video support
+- [x] Setup builds (PWA, Windows, Android, etc)
 - [ ] Welcome page
 - [ ] Add options to user drawer (on the right)
 - [ ] Local storage
@@ -58,31 +71,4 @@ Made with [Quasar Framework](https://quasar.dev/) - A [VueJS](https://vuejs.org/
 - [ ] Virtual scroll?
 - [ ] Share component
 - [ ] Auth
-
-## Install the dependencies
-
-```bash
-yarn
-```
-
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
-
-```bash
-quasar dev
-```
-
-### Lint the files
-
-```bash
-yarn run lint
-```
-
-### Build the app for production
-
-```bash
-quasar build
-```
-
-### Customize the configuration
-
-See [Configuring quasar.conf.js](https://v1.quasar.dev/quasar-cli/quasar-conf-js).
+- [ ] Advanced video support

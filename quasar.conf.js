@@ -171,7 +171,7 @@ module.exports = configure(function (/* ctx */) {
 
     // Full list of options: https://v1.quasar.dev/quasar-cli/developing-electron-apps/configuring-electron
     electron: {
-      bundler: 'packager', // 'packager' or 'builder'
+      bundler: 'builder', // 'packager' or 'builder'
 
       packager: {
         // https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options
@@ -189,11 +189,12 @@ module.exports = configure(function (/* ctx */) {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'bestdit'
+        appId: 'bestdit',
+        productName: 'Bestdit'
       },
 
       // More info: https://v1.quasar.dev/quasar-cli/developing-electron-apps/node-integration
-      nodeIntegration: true,
+      nodeIntegration: false,
 
       extendWebpack (/* cfg */) {
         // do something with Electron main process Webpack cfg

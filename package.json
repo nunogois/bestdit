@@ -7,11 +7,17 @@
   "private": true,
   "scripts": {
     "dev": "quasar dev",
+    "dev:android": "quasar dev -m capacitor -T android",
+    "dev:electron": "quasar dev -m electron",
     "build:pwa": "quasar build -m pwa",
+    "build:android": "quasar build -m capacitor -T android",
+    "build:electron": "quasar build -m electron",
+    "sign:android": "android-sign-apk.bat",
     "lint": "eslint --ext .js,.ts,.vue ./",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
+    "@capacitor/android": "^2.4.7",
     "@quasar/extras": "^1.0.0",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
@@ -26,8 +32,10 @@
     "babel-eslint": "^10.0.1",
     "devtron": "^1.4.0",
     "electron": "^9.0.0",
+    "electron-builder": "^22.4.0",
     "electron-debug": "^3.0.1",
     "electron-devtools-installer": "^3.0.0",
+    "electron-packager": "^14.1.1",
     "eslint": "^7.21.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-vue": "^7.7.0",

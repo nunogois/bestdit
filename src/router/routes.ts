@@ -8,7 +8,10 @@ const routes: RouteConfig[] = [
   },
   {
     path: '/',
-    component: () => import('pages/Welcome.vue')
+    component: () => import('layouts/EmptyLayout.vue'),
+    children: [
+      { path: 'welcome', component: () => import('pages/Welcome.vue') }
+    ]
   },
 
   // Always leave this as last one,

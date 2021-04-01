@@ -1,6 +1,6 @@
 # Bestdit (bestdit)
 
-The best content from Reddit showcased in one app.
+The best content from Reddit showcased in a single app.
 
 Check it out here: https://bestdit.vercel.app/
 
@@ -55,10 +55,13 @@ I will only build for Windows because that's the platform I'm using at the momen
 - Sass (indented syntax)
 - ESLint
 - Prettier
+- Lottie
 
 ## Other
 
 [Bestdit icon](https://www.flaticon.com/free-icon/trophy_3112946) made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+
+Free animated illustrations from [LottieFiles](https://lottiefiles.com/)
 
 ## To Do
 
@@ -77,10 +80,11 @@ I will only build for Windows because that's the platform I'm using at the momen
 - [x] GitHub repo
 - [x] Basic video support
 - [x] Setup builds (PWA, Windows, Android, etc)
-- [ ] Welcome page
-- [ ] Add options to user drawer (on the right)
-- [ ] Local storage
+- [x] Add Lottie
+- [x] Welcome page
+- [x] Local storage
 - [ ] Configure subreddits
+- [ ] Add options to user drawer (on the right)
 - [ ] Like / favorite
 - [ ] Show favorites
 - [ ] Virtual scroll?

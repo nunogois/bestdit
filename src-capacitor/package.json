@@ -1,7 +1,7 @@
 {
   "name": "bestdit",
   "version": "0.0.1",
-  "description": "The best content from Reddit showcased in one app.",
+  "description": "The best content from Reddit showcased in a single app.",
   "author": "Nuno Góis <github@nunogois.com>",
   "private": true,
   "dependencies": {

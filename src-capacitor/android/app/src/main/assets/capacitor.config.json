@@ -1,6 +1,6 @@
 {
   "appId": "com.bestdit.app",
-  "appName": "Bestdit - The best content from Reddit showcased in one app.",
+  "appName": "Bestdit - The best content from Reddit showcased in a single app.",
   "bundledWebRuntime": false,
   "npmClient": "yarn",
   "webDir": "www"

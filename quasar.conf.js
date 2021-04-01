@@ -104,13 +104,17 @@ module.exports = configure(function (/* ctx */) {
 
       // Quasar plugins
       plugins: [
-        'Notify'
+        'Notify',
+        'LocalStorage'
       ]
     },
 
     // animations: 'all', // --- includes all animations
     // https://v1.quasar.dev/options/animations
-    animations: [],
+    animations: [
+      'fadeInDown',
+      'fadeInUp'
+    ],
 
     // https://v1.quasar.dev/quasar-cli/developing-ssr/configuring-ssr
     ssr: {
@@ -124,7 +128,7 @@ module.exports = configure(function (/* ctx */) {
       manifest: {
         name: 'Bestdit',
         short_name: 'Bestdit',
-        description: 'The best content from Reddit showcased in one app.',
+        description: 'The best content from Reddit showcased in a single app.',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',

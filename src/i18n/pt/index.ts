@@ -5,9 +5,14 @@ export default {
     clipboard: 'Copiado para a área de transferência!'
   },
   drawer: {
+    reset: 'Reiniciar todas as definições',
+    about: 'Acerca do Bestdit',
     caption: {
+      theme: 'Tema claro ou escuro.',
+      reset: 'Limpar todos os seus dados e retornar ao ecrã de boas-vindas.',
       github: 'Consulte o projeto no GitHub!',
-      theme: 'Tema claro ou escuro.'
+      website: 'Visite o meu website!',
+      about: 'Mais informações sobre o Bestdit.'
     }
   },
   welcome: {
@@ -26,10 +31,9 @@ export default {
       thanks: 'Obrigado por experimentar o Bestdit!',
       iam: 'O meu nome é Nuno Góis, e sou um full-stack developer de Portugal.',
       website: 'Se desejar saber mais sobre mim, pode consultar o meu',
-      bestdit1: 'O Bestdit é um cliente de Reddit muito simples.',
+      bestdit1:
+        'O Bestdit é um cliente de Reddit muito simples, 100% multi-plataforma e de código aberto, construído com o Quasar Framework.',
       bestdit2:
-        'É 100% multi-plataforma e de código aberto, construído com o Quasar Framework.',
-      bestdit3:
         'É uma forma de demonstrar as minhas comunidades favoritas do Reddit num formato bastante acessível.',
       github: 'Não se esqueça de consultar os meus outros projetos no'
     },

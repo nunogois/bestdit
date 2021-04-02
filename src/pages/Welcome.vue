@@ -20,7 +20,7 @@
           class="animated fadeInDown"
           draggable="false"
         />
-        <h2 class="bestdit q-ma-sm animated fadeInDown">Bestdit</h2>
+        <h2 class="bestdit q-ma-sm animated fadeInDown text-center">Bestdit</h2>
         <span class="bestdit animated fadeInDown text-center"
           >The best content from Reddit showcased in a single app.</span
         >
@@ -40,10 +40,12 @@
         <lottie
           src="lottie/onboarding.json"
           :height="300"
-          :speed="0.5"
+          :speed="0.8"
           :loop="false"
         />
-        <h5 class="q-mb-md q-mt-none bestdit">{{ $t('welcome.language') }}</h5>
+        <h5 class="q-mb-md q-mt-none bestdit text-center">
+          {{ $t('welcome.language') }}
+        </h5>
 
         <q-select
           v-model="lang"
@@ -57,7 +59,7 @@
                 <img :src="'flags/' + lang.value + '.svg'" height="30" />
               </q-item-section>
               <q-item-section>
-                <q-item-label>{{ lang.label }}</q-item-label>
+                <q-item-label>{{ $t(lang.label) }}</q-item-label>
               </q-item-section>
             </q-item>
           </template>
@@ -68,7 +70,7 @@
                 <img :src="'flags/' + scope.opt.value + '.svg'" height="30" />
               </q-item-section>
               <q-item-section>
-                <q-item-label>{{ scope.opt.label }}</q-item-label>
+                <q-item-label>{{ $t(scope.opt.label) }}</q-item-label>
               </q-item-section>
             </q-item>
           </template>
@@ -88,7 +90,9 @@
 
       <q-carousel-slide name="theme" class="column no-wrap flex-center">
         <lottie src="lottie/daynight.json" :height="300" />
-        <h5 class="q-mb-md q-mt-none bestdit">{{ $t('welcome.theme') }}</h5>
+        <h5 class="q-mb-md q-mt-none bestdit text-center">
+          {{ $t('welcome.theme') }}
+        </h5>
         <div class="q-mt-md text-center">
           <div class="row items-center">
             <div class="col-auto text-right">
@@ -113,7 +117,7 @@
             no-caps
             outline
             @click="slide = 'topics'"
-            :disabled="dark === undefined"
+            :disabled="dark === null || dark === undefined"
           >
             <q-icon name="fas fa-chevron-right" class="q-ml-sm" size="15px" />
           </q-btn>
@@ -122,7 +126,9 @@
 
       <q-carousel-slide name="topics" class="column no-wrap flex-center">
         <lottie src="lottie/topics.json" :height="200" />
-        <h5 class="q-mb-md q-mt-none bestdit">{{ $t('welcome.interests') }}</h5>
+        <h5 class="q-mb-md q-mt-none bestdit text-center">
+          {{ $t('welcome.interests') }}
+        </h5>
 
         <q-option-group
           v-model="topics"
@@ -148,9 +154,9 @@
 
       <q-carousel-slide name="ng" class="column no-wrap flex-center">
         <lottie src="lottie/ng_dev.json" :height="200" />
-        <h5 class="q-mb-md q-mt-none bestdit">Nuno Góis</h5>
+        <h5 class="q-mb-md q-mt-none bestdit text-center">Nuno Góis</h5>
 
-        <p class="text-center">
+        <p class="text-center scroll">
           {{ $t('welcome.ng.thanks') }}<br /><br />
           {{ $t('welcome.ng.iam') }}<br />
           {{ $t('welcome.ng.website') }}
@@ -162,8 +168,7 @@
           >.<br /><br />
           {{ $t('welcome.ng.bestdit1') }}<br />
           {{ $t('welcome.ng.bestdit2') }}<br />
-          {{ $t('welcome.ng.bestdit3') }}<br />
-          <br /><br />
+          <br />
           {{ $t('welcome.ng.github') }}
           <a
             href="https://github.com/nunogois"
@@ -187,7 +192,7 @@
 
       <q-carousel-slide name="done" class="column no-wrap flex-center">
         <lottie src="lottie/rocket.json" :height="200" />
-        <h5 class="q-mb-md q-mt-none bestdit">
+        <h5 class="q-mb-md q-mt-none bestdit text-center">
           {{ $t('welcome.ready.title') }}
         </h5>
         <p class="text-center">
@@ -221,14 +226,20 @@ export default Vue.extend({
   data() {
     return {
       slide: 'welcome',
-      lang: { label: this.$t('welcome.lang.en-us'), value: 'en-us' },
-      langs: [
-        { label: this.$t('welcome.lang.en-us'), value: 'en-us' },
-        { label: this.$t('welcome.lang.pt'), value: 'pt' }
-      ],
+      lang: { label: 'welcome.lang.en-us', value: 'en-us' },
       dark: undefined as boolean | undefined,
-      topics: [],
-      topics_options: [
+      topics: []
+    }
+  },
+  computed: {
+    langs() {
+      return [
+        { label: 'welcome.lang.en-us', value: 'en-us' },
+        { label: 'welcome.lang.pt', value: 'pt' }
+      ]
+    },
+    topics_options() {
+      return [
         { label: this.$t('welcome.topics.animals'), value: 'animals' },
         { label: '🦝 Cute', value: 'cute' },
         { label: '📷 Photography', value: 'photography' },
@@ -243,7 +254,7 @@ export default Vue.extend({
       void this.$router.replace('/')
 
     this.lang = {
-      label: this.$t('welcome.lang.' + this.$i18n.locale),
+      label: 'welcome.lang.' + this.$i18n.locale,
       value: this.$i18n.locale
     }
 

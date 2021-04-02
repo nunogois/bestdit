@@ -175,7 +175,7 @@ export default Vue.extend({
     }
   },
   computed: {
-    langs() {
+    langs(): Array<{ label: string; value: string }> {
       return [
         { label: 'welcome.lang.en-us', value: 'en-us' },
         { label: 'welcome.lang.pt', value: 'pt' }

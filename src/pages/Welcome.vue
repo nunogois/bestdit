@@ -217,6 +217,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { TranslateResult } from 'vue-i18n'
 
 import Lottie from 'components/Lottie.vue'
 
@@ -232,13 +233,13 @@ export default Vue.extend({
     }
   },
   computed: {
-    langs() {
+    langs(): Array<{ label: string; value: string }> {
       return [
         { label: 'welcome.lang.en-us', value: 'en-us' },
         { label: 'welcome.lang.pt', value: 'pt' }
       ]
     },
-    topics_options() {
+    topics_options(): Array<{ label: TranslateResult; value: string }> {
       return [
         { label: this.$t('welcome.topics.animals'), value: 'animals' },
         { label: '🦝 Cute', value: 'cute' },
@@ -266,13 +267,13 @@ export default Vue.extend({
       this.$i18n.locale = value.value
       void import(
         /* webpackInclude: /(pt|en-us)\.js$/ */
-        'quasar/lang/' + this.lang.value
+        'quasar/lang/' + value.value
       ).then(lang => {
         // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
         this.$q.lang.set(lang.default)
       })
 
-      this.$q.localStorage.set('bestdit_lang', this.lang.value)
+      this.$q.localStorage.set('bestdit_lang', value.value)
     },
     changeTheme(value: boolean) {
       this.$q.dark.set(value)

@@ -82,6 +82,7 @@ Free animated illustrations from [LottieFiles](https://lottiefiles.com/)
 - [x] Add Lottie
 - [x] Welcome page
 - [x] Local storage
+- [x] Custom 404 page
 - [ ] Configure subreddits
 - [ ] Add options to user drawer (on the right)
 - [ ] Like / favorite

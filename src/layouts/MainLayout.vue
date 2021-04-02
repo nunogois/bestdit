@@ -16,26 +16,11 @@
           icon="menu"
           @click="rightDrawerOpen = !rightDrawerOpen"
         />
-        <!-- <q-btn
-          label="Nuno Góis"
-          flat
-          @click="rightDrawerOpen = !rightDrawerOpen"
-        >
-          <q-icon class="q-ml-md" name="account_circle" size="lg" />
-        </q-btn> -->
       </q-toolbar>
     </q-header>
 
     <q-drawer v-model="rightDrawerOpen" side="right" behavior="desktop" overlay>
       <q-list>
-        <!-- <q-item clickable>
-          <q-item-section avatar>
-            <q-avatar round icon="logout" />
-          </q-item-section>
-          <q-item-section>
-            Logout
-          </q-item-section>
-        </q-item> -->
         <q-item>
           <q-item-section avatar>
             <q-icon name="fas fa-palette" />
@@ -53,7 +38,7 @@
               </div>
             </div>
             <q-item-label caption>
-              Light or dark theme.
+              {{ $t('drawer.caption.theme') }}
             </q-item-label>
           </q-item-section>
         </q-item>
@@ -70,7 +55,7 @@
           <q-item-section>
             <q-item-label>GitHub</q-item-label>
             <q-item-label caption>
-              {{ $t('drawer.github_caption') }}
+              {{ $t('drawer.caption.github') }}
             </q-item-label>
           </q-item-section>
         </q-item>

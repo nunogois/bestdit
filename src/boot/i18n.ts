@@ -3,7 +3,7 @@ import messages from 'src/i18n'
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
 
-import { Quasar } from 'quasar'
+import { Quasar, LocalStorage } from 'quasar'
 
 declare module 'vue/types/vue' {
   interface Vue {
@@ -23,6 +23,9 @@ export default boot(({ app }) => {
   // Set i18n instance on app
   try {
     let lang = Quasar.lang.getLocale() || 'en-us'
+
+    const saved_lang = LocalStorage.getItem('bestdit_lang')
+    if (saved_lang !== null) lang = saved_lang as string
 
     lang = lang.indexOf('pt') === 0 ? 'pt' : lang
     lang = lang.indexOf('en') === 0 ? 'en-us' : lang

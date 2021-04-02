@@ -1,31 +1,22 @@
 <template>
-  <div class="fullscreen bg-blue text-white text-center q-pa-md flex flex-center">
+  <div class="fullscreen text-white text-center q-pa-md flex flex-center">
     <div>
-      <div style="font-size: 30vh">
-        404
-      </div>
+      <lottie src="lottie/404.json" />
 
-      <div class="text-h2" style="opacity:.4">
-        Oops. Nothing here...
-      </div>
+      <h5 class="q-ma-sm">404 - Not Found.</h5>
 
-      <q-btn
-        class="q-mt-xl"
-        color="white"
-        text-color="blue"
-        unelevated
-        to="/"
-        label="Go Home"
-        no-caps
-      />
+      <q-btn class="q-mt-xl" outline to="/" label="Go Home" no-caps />
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import Vue from 'vue'
+
+import Lottie from 'components/Lottie.vue'
 
 export default Vue.extend({
-  name: 'Error404'
-});
+  name: 'Error404',
+  components: { Lottie }
+})
 </script>

@@ -5,10 +5,12 @@ export default {
     clipboard: 'Copiado para a área de transferência!'
   },
   drawer: {
+    subs: 'Configurar subreddits',
     reset: 'Reiniciar todas as definições',
     about: 'Acerca do Bestdit',
     caption: {
       theme: 'Tema claro ou escuro.',
+      subs: 'Defina os seus subreddits favoritos.',
       reset: 'Limpar todos os seus dados e retornar ao ecrã de boas-vindas.',
       github: 'Consulte o projeto no GitHub!',
       website: 'Visite o meu website!',

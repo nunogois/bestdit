@@ -29,6 +29,50 @@
             :label="$t('welcome.start')"
             no-caps
             outline
+            @click="startNext"
+          >
+            <q-icon name="fas fa-chevron-right" class="q-ml-sm" size="15px" />
+          </q-btn>
+        </div>
+      </q-carousel-slide>
+
+      <q-carousel-slide
+        v-if="native_os.name !== ''"
+        name="native"
+        class="column no-wrap flex-center"
+      >
+        <lottie src="lottie/scooter.json" :height="300" />
+        <h5 class="q-mb-md q-mt-none bestdit text-center">
+          {{ $t('welcome.native.title') }}
+        </h5>
+
+        <p class="text-center scroll">
+          {{ $t('welcome.native.description', { v: native_os.name }) }}
+          <br />
+          {{ $t('welcome.native.description2') }}
+        </p>
+
+        <div class="q-mt-xl text-center">
+          <q-btn
+            :label="
+              native_os.name === 'PWA'
+                ? $t('welcome.native.install') + ' PWA'
+                : $t('welcome.native.download', { e: native_os.ext })
+            "
+            no-caps
+            outline
+            :color="native_os.color"
+            @click="$q.notify('WIP')"
+          >
+            <q-icon :name="native_os.icon" class="q-ml-sm" size="15px" />
+          </q-btn>
+        </div>
+
+        <div class="q-mt-lg text-center">
+          <q-btn
+            :label="$t('welcome.skip')"
+            no-caps
+            outline
             @click="slide = 'lang'"
           >
             <q-icon name="fas fa-chevron-right" class="q-ml-sm" size="15px" />
@@ -37,12 +81,7 @@
       </q-carousel-slide>
 
       <q-carousel-slide name="lang" class="column no-wrap flex-center">
-        <lottie
-          src="lottie/onboarding.json"
-          :height="300"
-          :speed="0.8"
-          :loop="false"
-        />
+        <lottie src="lottie/onboarding.json" :height="300" :loop="false" />
         <h5 class="q-mb-md q-mt-none bestdit text-center">
           {{ $t('welcome.language') }}
         </h5>
@@ -96,7 +135,13 @@
         <div class="q-mt-md text-center">
           <div class="row items-center">
             <div class="col-auto text-right">
-              <q-icon name="fas fa-sun" color="yellow-8" size="xl" />
+              <q-icon
+                name="fas fa-sun"
+                color="yellow-8"
+                size="xl"
+                class="cursor-pointer"
+                @click="setTheme(false)"
+              />
             </div>
             <div class="col-auto">
               <q-toggle
@@ -107,7 +152,12 @@
               />
             </div>
             <div class="col-auto text-left">
-              <q-icon name="fas fa-moon" size="xl" />
+              <q-icon
+                name="fas fa-moon"
+                size="xl"
+                class="cursor-pointer"
+                @click="setTheme(true)"
+              />
             </div>
           </div>
         </div>
@@ -225,6 +275,12 @@ import { TranslateResult } from 'vue-i18n'
 
 import Lottie from 'components/Lottie.vue'
 
+declare global {
+  interface Window {
+    pwa_install: Event
+  }
+}
+
 export default Vue.extend({
   name: 'Welcome',
   components: { Lottie },
@@ -241,6 +297,31 @@ export default Vue.extend({
     }
   },
   computed: {
+    native_os(): { name: string; ext: string; icon: string; color: string } {
+      if (this.$q.platform.is.android && !this.$q.platform.is.capacitor)
+        return {
+          name: 'Android',
+          ext: 'APK',
+          icon: 'fab fa-android',
+          color: 'light-green-6'
+        }
+      else if (this.$q.platform.is.win && !this.$q.platform.is.electron)
+        return {
+          name: 'Windows',
+          ext: 'EXE',
+          icon: 'fab fa-windows',
+          color: 'light-blue-7'
+        }
+      else if (window.pwa_install && window.pwa_install !== null)
+        return {
+          name: 'Progressive Web App',
+          ext: 'PWA',
+          icon: 'fas fa-rocket',
+          color: 'orange-7'
+        }
+
+      return { name: '', ext: '', icon: '', color: '' }
+    },
     langs(): Array<{ label: string; value: string }> {
       return [
         { label: 'welcome.lang.en-us', value: 'en-us' },
@@ -424,6 +505,14 @@ export default Vue.extend({
     this.dark = this.$q.dark.mode === 'auto' ? undefined : this.$q.dark.mode
   },
   methods: {
+    startNext() {
+      this.slide = this.native_os.name !== '' ? 'native' : 'lang'
+    },
+    native_os_ext(os: string) {
+      if (os === 'Android') return 'APK'
+      else if (os === 'Windows') return 'EXE'
+      return ''
+    },
     changeLang(value: { label: string; value: string }) {
       this.$i18n.locale = value.value
       void import(
@@ -439,6 +528,10 @@ export default Vue.extend({
     changeTheme(value: boolean) {
       this.$q.dark.set(value)
       this.$q.localStorage.set('bestdit_dark', value)
+    },
+    setTheme(value: boolean) {
+      this.dark = value
+      this.changeTheme(value)
     },
     changeSubs(topics: Array<string>) {
       let subs = new Set()

@@ -87,6 +87,20 @@
           </q-item-section>
         </q-item>
 
+        <q-item to="/subs">
+          <q-item-section avatar>
+            <q-icon name="fab fa-reddit-alien" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label>
+              {{ $t('drawer.subs') }}
+            </q-item-label>
+            <q-item-label caption>
+              {{ $t('drawer.caption.subs') }}
+            </q-item-label>
+          </q-item-section>
+        </q-item>
+
         <q-separator />
 
         <q-item clickable @click="resetSettings">
@@ -141,7 +155,7 @@
 
         <q-separator />
 
-        <q-item clickable>
+        <q-item to="/about">
           <q-item-section avatar>
             <img src="~assets/logo.png" height="24" />
           </q-item-section>

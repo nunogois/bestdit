@@ -5,10 +5,12 @@ export default {
     clipboard: 'Copied to clipboard!'
   },
   drawer: {
-    reset: 'Reset all settings.',
+    subs: 'Configure subreddits',
+    reset: 'Reset all settings',
     about: 'About Bestdit',
     caption: {
       theme: 'Light or dark theme.',
+      subs: 'Set your favorite subreddits.',
       reset: 'Clear all your data and return to the welcome screen.',
       github: 'Check out this project on GitHub!',
       website: 'Check out my website!',
@@ -17,6 +19,15 @@ export default {
   },
   welcome: {
     start: 'Get Started',
+    native: {
+      title: 'Installation available!',
+      description:
+        'We have detected an installable version for your system: {v}.',
+      description2:
+        'Installing is totally optional but may provide a better experience in some cases.',
+      install: 'Install',
+      download: 'Download {e}'
+    },
     language: 'Pick your language!',
     lang: {
       'en-us': 'English',
@@ -64,6 +75,7 @@ export default {
       glhf: 'Hope you have a great time!',
       start: 'Start using Bestdit!'
     },
-    next: 'Next'
+    next: 'Next',
+    skip: 'Skip'
   }
 }

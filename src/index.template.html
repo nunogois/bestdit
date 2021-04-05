@@ -49,4 +49,12 @@
     <!-- DO NOT touch the following DIV -->
     <div id="q-app"></div>
   </body>
+
+  <!-- PWA INSTALL FIX - JUST USE window.pwa_install -->
+  <script type="text/javascript">    
+    window.addEventListener('beforeinstallprompt', function (e) {
+      e.preventDefault()
+      window.pwa_install = e
+    })
+  </script>
 </html>

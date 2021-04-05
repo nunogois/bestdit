@@ -85,11 +85,14 @@ Free animated illustrations from [LottieFiles](https://lottiefiles.com/)
 - [x] Welcome page
 - [x] Local storage
 - [x] Custom 404 page
-- [ ] Configure subreddits
-- [ ] Add options to user drawer (on the right)
+- [x] Add options to user drawer (on the right)
+- [x] Native version recommendation on Welcome
+- [ ] Subreddit configuration page
+- [ ] About page
+- [ ] Better scroll load on mobile
 - [ ] Like / favorite
 - [ ] Show favorites
 - [ ] Virtual scroll?
 - [ ] Share component
 - [ ] Auth
-- [ ] Advanced video support
+- [ ] Better Reddit post support (some videos, galleries and other embedded media are not working correctly)

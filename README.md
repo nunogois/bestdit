@@ -36,6 +36,8 @@ This is the default web app. You can "install" the PWA through the options on th
 
 The image shows Bestdit running on Android Studio's emulator. You may try the app on your Android phone after installing the **.apk**.
 
+The apk is currently being built targetting Android SDK 29 (Android 10).
+
 I can't build iOS apps because I don't have a Mac at the moment. If you have one, simply follow the steps if you wish to build the app.
 
 ### [Electron (Desktop - Windows, Linux, MacOS)](https://quasar.dev/quasar-cli/developing-electron-apps/introduction)

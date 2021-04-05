@@ -25,14 +25,33 @@ export default {
     theme: 'Escolha o seu tema!',
     interests: 'Escolha os seus interesses!',
     topics: {
-      animals: '🐦 Animais'
+      animals: '🐦 Animais',
+      art: '🎨 Arte',
+      cars: '🚗 Carros',
+      cute: '🦝 Fofinho',
+      design: '🏡 Design',
+      engineering: '🎡 Engenharia',
+      food: '🥓 Comida',
+      funny: '😂 Divertido',
+      gaming: '🎮 Videojogos',
+      gifs: '🎬 Gifs',
+      history: '⌛ História',
+      interesting: '🤔 Interessante',
+      motivational: '💪 Motivacional',
+      music: '🎵 Música',
+      nature: '🌳 Natureza',
+      photography: '📷 Fotografia',
+      programming: '👨‍💻 Programação',
+      videos: '📺 Vídeos',
+      space: '🚀 Espaço',
+      wallpapers: '💻 Wallpapers'
     },
     ng: {
       thanks: 'Obrigado por experimentar o Bestdit!',
       iam: 'O meu nome é Nuno Góis, e sou um full-stack developer de Portugal.',
       website: 'Se desejar saber mais sobre mim, pode consultar o meu',
       bestdit1:
-        'O Bestdit é um cliente de Reddit muito simples, 100% multi-plataforma e de código aberto, construído com o Quasar Framework.',
+        'O Bestdit é um cliente de Reddit muito simples, 100% multi-plataforma e de código aberto, construído com o',
       bestdit2:
         'É uma forma de demonstrar as minhas comunidades favoritas do Reddit num formato bastante acessível.',
       github: 'Não se esqueça de consultar os meus outros projetos no'

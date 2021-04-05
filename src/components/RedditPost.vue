@@ -59,6 +59,7 @@
           class="full-width"
           draggable="false"
           controls
+          muted
         >
           <source
             v-if="

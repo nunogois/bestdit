@@ -133,10 +133,11 @@
         <q-option-group
           v-model="topics"
           :options="topics_options"
-          class="topics-options"
+          class="topics-options scroll"
           color="green"
           type="checkbox"
           left-label
+          @input="changeSubs"
         />
 
         <div class="q-mt-xl text-center">
@@ -166,7 +167,10 @@
             target="_blank"
             >website</a
           >.<br /><br />
-          {{ $t('welcome.ng.bestdit1') }}<br />
+          {{ $t('welcome.ng.bestdit1') }}
+          <a href="https://quasar.dev/" class="welcome-link" target="_blank"
+            >Quasar Framework</a
+          >.<br />
           {{ $t('welcome.ng.bestdit2') }}<br />
           <br />
           {{ $t('welcome.ng.github') }}
@@ -229,7 +233,11 @@ export default Vue.extend({
       slide: 'welcome',
       lang: { label: 'welcome.lang.en-us', value: 'en-us' },
       dark: undefined as boolean | undefined,
-      topics: []
+      topics: [] as Array<{
+        label: TranslateResult
+        value: string
+        subs: Array<string>
+      }>
     }
   },
   computed: {
@@ -239,15 +247,168 @@ export default Vue.extend({
         { label: 'welcome.lang.pt', value: 'pt' }
       ]
     },
-    topics_options(): Array<{ label: TranslateResult; value: string }> {
+    topics_options(): Array<{
+      label: TranslateResult
+      value: string
+      subs: Array<string>
+    }> {
       return [
-        { label: this.$t('welcome.topics.animals'), value: 'animals' },
-        { label: '🦝 Cute', value: 'cute' },
-        { label: '📷 Photography', value: 'photography' },
-        { label: '👨‍💻 Programming', value: 'programming' },
-        { label: '📱 Technology', value: 'technology' },
-        { label: '📺 Videos', value: 'videos' }
-      ]
+        {
+          label: this.$t('welcome.topics.animals'),
+          value: 'animals',
+          subs: [
+            'Awwducational',
+            'AnimalPorn',
+            'animalsbeingbros',
+            'AnimalsBeingDerps',
+            'Zoomies'
+          ]
+        },
+        {
+          label: this.$t('welcome.topics.art'),
+          value: 'art',
+          subs: ['art']
+        },
+        {
+          label: this.$t('welcome.topics.cars'),
+          value: 'cars',
+          subs: ['cars', 'carporn']
+        },
+        {
+          label: this.$t('welcome.topics.cute'),
+          value: 'cute',
+          subs: [
+            'aww',
+            'wholesomememes',
+            'Awwducational',
+            'Eyebleach',
+            'MadeMeSmile'
+          ]
+        },
+        {
+          label: this.$t('welcome.topics.design'),
+          value: 'design',
+          subs: ['DesignPorn', 'RoomPorn', 'CozyPlaces']
+        },
+        {
+          label: this.$t('welcome.topics.engineering'),
+          value: 'engineering',
+          subs: ['MachinePorn', 'EngineeringPorn']
+        },
+        {
+          label: this.$t('welcome.topics.food'),
+          value: 'food',
+          subs: ['FoodPorn', 'food']
+        },
+        {
+          label: this.$t('welcome.topics.funny'),
+          value: 'funny',
+          subs: ['funny']
+        },
+        {
+          label: this.$t('welcome.topics.gaming'),
+          value: 'gaming',
+          subs: [
+            'gaming',
+            'pcmasterrace',
+            'battlestations',
+            'GamePhysics',
+            'IndieGaming'
+          ]
+        },
+        {
+          label: this.$t('welcome.topics.gifs'),
+          value: 'gifs',
+          subs: [
+            'gifs',
+            'HighQualityGifs',
+            'gifsthatkeepongiving',
+            'educationalgifs',
+            'maybemaybemaybe',
+            'Unexpected'
+          ]
+        },
+        {
+          label: this.$t('welcome.topics.history'),
+          value: 'history',
+          subs: ['100yearsago', 'HistoryPorn', 'OldSchoolCool']
+        },
+        {
+          label: this.$t('welcome.topics.interesting'),
+          value: 'interesting',
+          subs: [
+            'mildlyinteresting',
+            'interestingasfuck',
+            'woahdude',
+            'BeAmazed',
+            'nonononoyes',
+            'blackmagicfuckery',
+            'Unexpected',
+            'maybemaybemaybe',
+            'dataisbeautiful',
+            'MovieDetails'
+          ]
+        },
+        {
+          label: this.$t('welcome.topics.motivational'),
+          value: 'motivational',
+          subs: [
+            'GetMotivated',
+            'progresspics',
+            'toptalent',
+            'nextfuckinglevel'
+          ]
+        },
+        {
+          label: this.$t('welcome.topics.music'),
+          value: 'music',
+          subs: ['listentothis', 'music', 'randomactsofmusic']
+        },
+        {
+          label: this.$t('welcome.topics.nature'),
+          value: 'nature',
+          subs: ['CampingandHiking', 'EarthPorn', 'NatureIsFuckingLit']
+        },
+        {
+          label: this.$t('welcome.topics.photography'),
+          value: 'photography',
+          subs: ['EarthPorn', 'itookapicture', 'pics', 'PerfectTiming']
+        },
+        {
+          label: this.$t('welcome.topics.programming'),
+          value: 'programming',
+          subs: ['programminghumor', 'softwaregore', 'unixporn']
+        },
+        {
+          label: this.$t('welcome.topics.videos'),
+          value: 'videos',
+          subs: ['videos', 'youtubehaiku', 'PraiseTheCameraMan', 'Unexpected']
+        },
+        {
+          label: this.$t('welcome.topics.space'),
+          value: 'space',
+          subs: ['space']
+        },
+        {
+          label: this.$t('welcome.topics.wallpapers'),
+          value: 'wallpapers',
+          subs: [
+            'Amoledbackgrounds',
+            'wallpapers',
+            'wallpaper',
+            'MobileWallpaper',
+            'MobileWallpapers'
+          ]
+        }
+      ].sort((a, b) => {
+        let a_label = a.label as string
+        a_label = a_label.split(' ')[1]
+
+        let b_label = b.label as string
+        b_label = b_label.split(' ')[1]
+
+        return a_label < b_label ? -1 : a_label > b_label ? 1 : 0
+      })
     }
   },
   mounted() {
@@ -278,6 +439,18 @@ export default Vue.extend({
     changeTheme(value: boolean) {
       this.$q.dark.set(value)
       this.$q.localStorage.set('bestdit_dark', value)
+    },
+    changeSubs(topics: Array<string>) {
+      let subs = new Set()
+      this.topics_options
+        .filter(t => topics.indexOf(t.value) > -1)
+        .map(t => t.subs)
+        .forEach(t =>
+          t.forEach(t => {
+            subs.add(t)
+          })
+        )
+      this.$q.localStorage.set('bestdit_subs', [...subs])
     },
     done() {
       this.$q.localStorage.set('bestdit_welcome', false)

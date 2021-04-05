@@ -45,7 +45,8 @@ export default Vue.extend({
   },
   methods: {
     async load(reset = false) {
-      const query = 'ProgrammerHumor/top.json?t=all'
+      const subs = this.$q.localStorage.getItem('bestdit_subs') as Array<string>
+      const query = subs.join().replace(/,/g, '+') + '/top.json?t=day'
 
       await this.$axios
         .get(`https://www.reddit.com/r/${query}${this.getAfter(reset)}`)

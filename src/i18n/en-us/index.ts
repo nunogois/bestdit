@@ -25,14 +25,33 @@ export default {
     theme: 'Pick your theme!',
     interests: 'Pick your interests!',
     topics: {
-      animals: '🐦 Animals'
+      animals: '🐦 Animals',
+      art: '🎨 Art',
+      cars: '🚗 Cars',
+      cute: '🦝 Cute',
+      design: '🏡 Design',
+      engineering: '🎡 Engineering',
+      food: '🥓 Food',
+      funny: '😂 Funny',
+      gaming: '🎮 Gaming',
+      gifs: '🎬 Gifs',
+      history: '⌛ History',
+      interesting: '🤔 Interesting',
+      motivational: '💪 Motivational',
+      music: '🎵 Music',
+      nature: '🌳 Nature',
+      photography: '📷 Photography',
+      programming: '👨‍💻 Programming',
+      videos: '📺 Videos',
+      space: '🚀 Space',
+      wallpapers: '💻 Wallpapers'
     },
     ng: {
       thanks: 'Thanks for checking out Bestdit!',
       iam: "I'm Nuno Góis, a full-stack developer from Portugal.",
       website: "If you'd like to know more about me, you can check out my",
       bestdit1:
-        'Bestdit is a very simple Reddit client, 100% cross-platform and open-source, built using Quasar Framework.',
+        'Bestdit is a very simple Reddit client, 100% cross-platform and open-source, built using',
       bestdit2:
         'It showcases some of my favorite Reddit communities in a very accessible format.',
       github: "Don't forget to check out my other projects on"

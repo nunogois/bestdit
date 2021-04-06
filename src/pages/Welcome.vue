@@ -306,6 +306,7 @@ export default Vue.extend({
   },
   computed: {
     native_os(): { name: string; ext: string; icon: string; color: string } {
+      console.log('pwa_install', window.pwa_install)
       if (this.$q.platform.is.android && !this.$q.platform.is.capacitor)
         return {
           name: 'Android',
@@ -320,13 +321,15 @@ export default Vue.extend({
           icon: 'fab fa-windows',
           color: 'light-blue-7'
         }
-      else if (window.pwa_install && window.pwa_install !== null)
+      else if (window.pwa_install && window.pwa_install !== null) {
+        console.log('PWA')
         return {
           name: 'Progressive Web App',
           ext: 'PWA',
           icon: 'fas fa-rocket',
           color: 'orange-7'
         }
+      }
 
       return { name: '', ext: '', icon: '', color: '' }
     },

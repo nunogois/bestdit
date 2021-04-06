@@ -10170,6 +10170,11 @@ vue-lottie@^0.2.1:
   dependencies:
     lottie-web "^5.1.9"
 
+vue-pwa-install@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/vue-pwa-install/-/vue-pwa-install-1.1.0.tgz#f642a622e4c97fb2d22f3bf3458eade7478c302e"
+  integrity sha512-0zNt7DGSBvLyVntTAsbshvGDAaa27pKCB4P5Fs0UkaLCmZTt11T6clxcPFSOL3VWduSPl44abuig+zWWL/b1Cw==
+
 vue-router@3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.2.0.tgz#da35195ffe37fdf0bec9f5f8f72781d2a7718815"

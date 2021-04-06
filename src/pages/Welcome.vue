@@ -271,30 +271,18 @@ import Vue from 'vue'
 import { openURL } from 'quasar'
 import { TranslateResult } from 'vue-i18n'
 
+import { VuePwaInstallMixin, BeforeInstallPromptEvent } from 'vue-pwa-install'
+
 import Lottie from 'components/Lottie.vue'
-
-// declare global {
-//   interface Window {
-//     pwa_install: BeforeInstallPromptEvent | null
-//   }
-//   interface BeforeInstallPromptEvent extends Event {
-//     readonly platforms: Array<string>
-
-//     readonly userChoice: Promise<{
-//       outcome: 'accepted' | 'dismissed'
-//       platform: string
-//     }>
-
-//     prompt(): Promise<void>
-//   }
-// }
 
 export default Vue.extend({
   name: 'Welcome',
   components: { Lottie },
+  mixins: [VuePwaInstallMixin],
   data() {
     return {
       slide: 'welcome',
+      pwa_install: null as BeforeInstallPromptEvent | null,
       lang: { label: 'welcome.lang.en-us', value: 'en-us' },
       dark: undefined as boolean | undefined,
       topics: [] as Array<{
@@ -306,7 +294,6 @@ export default Vue.extend({
   },
   computed: {
     native_os(): { name: string; ext: string; icon: string; color: string } {
-      console.log('pwa_install', this.$pwa_install)
       if (this.$q.platform.is.android && !this.$q.platform.is.capacitor)
         return {
           name: 'Android',
@@ -321,8 +308,7 @@ export default Vue.extend({
           icon: 'fab fa-windows',
           color: 'light-blue-7'
         }
-      else if (this.$pwa_install && this.$pwa_install !== null) {
-        console.log('PWA')
+      else if (this.pwa_install && this.pwa_install !== null) {
         return {
           name: 'Progressive Web App',
           ext: 'PWA',
@@ -528,14 +514,10 @@ export default Vue.extend({
         openURL(
           'https://github.com/nunogois/bestdit/releases/download/v0.1-beta/Bestdit.exe'
         )
-      else if (
-        ext === 'PWA' &&
-        this.$pwa_install &&
-        this.$pwa_install !== null
-      ) {
-        void this.$pwa_install.prompt()
-        void this.$pwa_install.userChoice.then(() => {
-          this.$pwa_install = null
+      else if (ext === 'PWA' && this.pwa_install && this.pwa_install !== null) {
+        void this.pwa_install.prompt()
+        void this.pwa_install.userChoice.then(() => {
+          this.pwa_install = null
         })
       }
     },

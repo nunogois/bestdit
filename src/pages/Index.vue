@@ -54,7 +54,9 @@ export default Vue.extend({
           const response = res.data as RedditResponse
           const posts = response.data.children
             .map(p => p.data)
-            .filter(p => p.thumbnail !== 'self') as Post[]
+            .filter(
+              p => p.thumbnail !== 'self' && !p.url.startsWith('http://')
+            ) as Post[]
 
           if (reset) this.posts = posts
           else this.posts = this.posts.concat(posts)

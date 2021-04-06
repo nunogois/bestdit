@@ -25,5 +25,6 @@ export interface RedditResponse {
 export interface RedditResponseChildren {
   data: {
     thumbnail: string
+    url: string
   }
 }

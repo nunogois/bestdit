@@ -11,7 +11,9 @@ Made with [Quasar Framework](https://quasar.dev/) - A [VueJS](https://vuejs.org/
 ## Features
 
 - 100% cross-platform with a single open-source codebase
-- Dark mode
+- Welcome screen (Carousel)
+- Light / Dark theme
+- Configure subreddits
 - Infinite scroll
 - Pull down to refresh
 - i18n

@@ -523,6 +523,7 @@ export default Vue.extend({
       else if (ext === 'PWA' && this.pwa_install && this.pwa_install !== null) {
         void this.pwa_install.prompt()
         void this.pwa_install.userChoice.then(() => {
+          this.slide = 'theme'
           this.pwa_install = null
         })
       }

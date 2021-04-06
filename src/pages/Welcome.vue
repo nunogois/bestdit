@@ -99,8 +99,8 @@
         <div class="q-mt-lg text-center">
           <q-btn
             :label="
-              native_os.name === 'PWA'
-                ? $t('welcome.native.install') + ' PWA'
+              native_os.ext === 'PWA'
+                ? $t('welcome.native.install', { e: native_os.ext })
                 : $t('welcome.native.download', { e: native_os.ext })
             "
             no-caps

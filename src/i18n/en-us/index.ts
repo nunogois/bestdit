@@ -17,8 +17,11 @@ export default {
       about: 'More information about Bestdit.'
     }
   },
-  about: {
-    back: 'Go back'
+  subs: {
+    add: 'Add subreddit',
+    added: 'Subreddit r/{s} added successfully!',
+    already_added: 'Subreddit r/{s} already in the list.',
+    save: 'Save'
   },
   welcome: {
     start: 'Get Started',

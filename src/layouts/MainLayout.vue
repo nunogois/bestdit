@@ -152,20 +152,6 @@
             </q-item-label>
           </q-item-section>
         </q-item>
-
-        <q-separator />
-
-        <q-item to="/about">
-          <q-item-section avatar>
-            <img src="~assets/logo.png" height="24" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>{{ $t('drawer.about') }}</q-item-label>
-            <q-item-label caption>
-              {{ $t('drawer.caption.about') }}
-            </q-item-label>
-          </q-item-section>
-        </q-item>
       </q-list>
     </q-drawer>
 

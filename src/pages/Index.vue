@@ -10,6 +10,7 @@
           :key="post.id"
           :post="post"
           :loading="loading"
+          :ref="post.name"
         ></reddit-post>
 
         <template
@@ -26,6 +27,9 @@
 <script lang="ts">
 import Vue from 'vue'
 
+import { scroll } from 'quasar'
+const { getScrollTarget, setScrollPosition } = scroll
+
 import { Post, RedditResponse } from 'components/models'
 import RedditPost from 'components/RedditPost.vue'
 import RedditPostLoading from 'src/components/RedditPostLoading.vue'
@@ -40,7 +44,7 @@ export default Vue.extend({
   },
   async mounted() {
     if (!this.posts.length) {
-      await this.load()
+      await this.load(true)
     }
   },
   methods: {
@@ -74,7 +78,19 @@ export default Vue.extend({
       done()
     },
     async loadMore(_: number, done: () => void) {
+      let el
+
+      if (this.posts[this.posts.length - 1]) {
+        const ref = this.$refs[this.posts[this.posts.length - 1].name] as Vue[]
+        el = ref[0].$el as HTMLElement
+      }
       await this.load()
+
+      if (el) {
+        const target = getScrollTarget(el)
+        const offset = el.offsetTop
+        setScrollPosition(target, offset, 100)
+      }
       done()
     },
     getAfter(reset = false) {

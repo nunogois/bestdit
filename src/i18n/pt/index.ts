@@ -17,6 +17,12 @@ export default {
       about: 'Mais informações sobre o Bestdit.'
     }
   },
+  subs: {
+    add: 'Adicionar subreddit',
+    added: 'Subreddit r/{s} adicionado com sucesso!',
+    already_added: 'Subreddit r/{s} já se encontra na lista.',
+    save: 'Guardar'
+  },
   welcome: {
     start: 'Iniciar',
     native: {

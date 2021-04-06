@@ -19,6 +19,16 @@
     color: black
 
 .body--dark
+  &::-webkit-scrollbar
+    width: 10px
+    height: 10px
+
+  &::-webkit-scrollbar-thumb
+    background: rgba(172, 172, 172, 0.3)
+
+  &::-webkit-scrollbar-thumb:hover
+    background: rgba(172, 172, 172, 0.3)
+
   ::-webkit-scrollbar
     width: 10px
     height: 10px
@@ -28,6 +38,7 @@
 
   ::-webkit-scrollbar-thumb:hover
     background: rgba(172, 172, 172, 0.3)
+
   header
     background: #1d1d1d
 

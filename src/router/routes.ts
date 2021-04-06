@@ -11,8 +11,7 @@ const routes: RouteConfig[] = [
     component: () => import('layouts/EmptyLayout.vue'),
     children: [
       { path: 'welcome', component: () => import('pages/Welcome.vue') },
-      { path: 'subs', component: () => import('pages/Subs.vue') },
-      { path: 'about', component: () => import('pages/About.vue') }
+      { path: 'subs', component: () => import('pages/Subs.vue') }
     ]
   },
 

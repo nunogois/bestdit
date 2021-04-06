@@ -501,6 +501,12 @@ export default Vue.extend({
     this.$q.dark.set(this.$q.localStorage.getItem('bestdit_dark') as boolean)
     this.dark = this.$q.dark.mode === 'auto' ? undefined : this.$q.dark.mode
   },
+  created() {
+    this.$on('canInstall', (event: BeforeInstallPromptEvent) => {
+      event.preventDefault()
+      this.pwa_install = event
+    })
+  },
   methods: {
     startNext() {
       this.slide = this.native_os.name !== '' ? 'native' : 'theme'

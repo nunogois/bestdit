@@ -26,7 +26,7 @@ export default {
         'A instalação é totalmente opcional mas poderá proporcionar uma experiência superior em alguns casos.',
       description3:
         'Talvez seja necessário ativar a instalação de origens desconhecidas no seu dispositivo.',
-      install: 'Instalar',
+      install: 'Instalar {e}',
       download: 'Descarregar {e}'
     },
     language: 'Escolha o seu idioma!',

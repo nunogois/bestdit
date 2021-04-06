@@ -29,50 +29,6 @@
             :label="$t('welcome.start')"
             no-caps
             outline
-            @click="startNext"
-          >
-            <q-icon name="fas fa-chevron-right" class="q-ml-sm" size="15px" />
-          </q-btn>
-        </div>
-      </q-carousel-slide>
-
-      <q-carousel-slide
-        v-if="native_os.name !== ''"
-        name="native"
-        class="column no-wrap flex-center"
-      >
-        <lottie src="lottie/scooter.json" :height="300" />
-        <h5 class="q-mb-md q-mt-none bestdit text-center">
-          {{ $t('welcome.native.title') }}
-        </h5>
-
-        <p class="text-center scroll">
-          {{ $t('welcome.native.description', { v: native_os.name }) }}
-          <br />
-          {{ $t('welcome.native.description2') }}
-        </p>
-
-        <div class="q-mt-xl text-center">
-          <q-btn
-            :label="
-              native_os.name === 'PWA'
-                ? $t('welcome.native.install') + ' PWA'
-                : $t('welcome.native.download', { e: native_os.ext })
-            "
-            no-caps
-            outline
-            :color="native_os.color"
-            @click="$q.notify('WIP')"
-          >
-            <q-icon :name="native_os.icon" class="q-ml-sm" size="15px" />
-          </q-btn>
-        </div>
-
-        <div class="q-mt-lg text-center">
-          <q-btn
-            :label="$t('welcome.skip')"
-            no-caps
-            outline
             @click="slide = 'lang'"
           >
             <q-icon name="fas fa-chevron-right" class="q-ml-sm" size="15px" />
@@ -116,8 +72,49 @@
         </q-select>
 
         <div class="q-mt-xl text-center">
+          <q-btn :label="$t('welcome.next')" no-caps outline @click="startNext">
+            <q-icon name="fas fa-chevron-right" class="q-ml-sm" size="15px" />
+          </q-btn>
+        </div>
+      </q-carousel-slide>
+
+      <q-carousel-slide
+        v-if="native_os.name !== ''"
+        name="native"
+        class="column no-wrap flex-center"
+      >
+        <lottie src="lottie/scooter.json" :height="300" />
+        <h5 class="q-mb-md q-mt-none bestdit text-center">
+          {{ $t('welcome.native.title') }}
+        </h5>
+
+        <p class="text-center scroll">
+          {{ $t('welcome.native.description', { v: native_os.name }) }}
+          <br />
+          {{ $t('welcome.native.description2') }}
+          <br />
+          {{ $t('welcome.native.description3') }}
+        </p>
+
+        <div class="q-mt-lg text-center">
           <q-btn
-            :label="$t('welcome.next')"
+            :label="
+              native_os.name === 'PWA'
+                ? $t('welcome.native.install') + ' PWA'
+                : $t('welcome.native.download', { e: native_os.ext })
+            "
+            no-caps
+            outline
+            :color="native_os.color"
+            @click="download(native_os.ext)"
+          >
+            <q-icon :name="native_os.icon" class="q-ml-sm" size="15px" />
+          </q-btn>
+        </div>
+
+        <div class="q-mt-lg text-center">
+          <q-btn
+            :label="$t('welcome.skip')"
             no-caps
             outline
             @click="slide = 'theme'"
@@ -271,13 +268,24 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { openURL } from 'quasar'
 import { TranslateResult } from 'vue-i18n'
 
 import Lottie from 'components/Lottie.vue'
 
 declare global {
   interface Window {
-    pwa_install: Event
+    pwa_install: BeforeInstallPromptEvent | null
+  }
+  interface BeforeInstallPromptEvent extends Event {
+    readonly platforms: Array<string>
+
+    readonly userChoice: Promise<{
+      outcome: 'accepted' | 'dismissed'
+      platform: string
+    }>
+
+    prompt(): Promise<void>
   }
 }
 
@@ -506,12 +514,27 @@ export default Vue.extend({
   },
   methods: {
     startNext() {
-      this.slide = this.native_os.name !== '' ? 'native' : 'lang'
+      this.slide = this.native_os.name !== '' ? 'native' : 'theme'
     },
-    native_os_ext(os: string) {
-      if (os === 'Android') return 'APK'
-      else if (os === 'Windows') return 'EXE'
-      return ''
+    download(ext: string) {
+      if (ext === 'APK')
+        openURL(
+          'https://github.com/nunogois/bestdit/releases/download/v0.1-beta/Bestdit.apk'
+        )
+      else if (ext === 'EXE')
+        openURL(
+          'https://github.com/nunogois/bestdit/releases/download/v0.1-beta/Bestdit.exe'
+        )
+      else if (
+        ext === 'PWA' &&
+        window.pwa_install &&
+        window.pwa_install !== null
+      ) {
+        void window.pwa_install.prompt()
+        void window.pwa_install.userChoice.then(() => {
+          window.pwa_install = null
+        })
+      }
     },
     changeLang(value: { label: string; value: string }) {
       this.$i18n.locale = value.value

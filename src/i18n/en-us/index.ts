@@ -17,6 +17,9 @@ export default {
       about: 'More information about Bestdit.'
     }
   },
+  about: {
+    back: 'Go back'
+  },
   welcome: {
     start: 'Get Started',
     native: {
@@ -25,6 +28,8 @@ export default {
         'We have detected an installable version for your system: {v}.',
       description2:
         'Installing is totally optional but may provide a better experience in some cases.',
+      description3:
+        'You may have to enable installation from unknown sources in your device.',
       install: 'Install',
       download: 'Download {e}'
     },

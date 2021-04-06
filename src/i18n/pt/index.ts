@@ -19,6 +19,16 @@ export default {
   },
   welcome: {
     start: 'Iniciar',
+    native: {
+      title: 'Instalação disponível!',
+      description: 'Detetámos uma versão instalável para o seu sistema: {v}.',
+      description2:
+        'A instalação é totalmente opcional mas poderá proporcionar uma experiência superior em alguns casos.',
+      description3:
+        'Talvez seja necessário ativar a instalação de origens desconhecidas no seu dispositivo.',
+      install: 'Instalar',
+      download: 'Descarregar {e}'
+    },
     language: 'Escolha o seu idioma!',
     lang: {
       'en-us': 'Inglês',
@@ -66,6 +76,7 @@ export default {
       glhf: 'Espero que se divirta!',
       start: 'Começar a usar o Bestdit!'
     },
-    next: 'Próximo'
+    next: 'Próximo',
+    skip: 'Ignorar'
   }
 }

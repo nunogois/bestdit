@@ -273,21 +273,21 @@ import { TranslateResult } from 'vue-i18n'
 
 import Lottie from 'components/Lottie.vue'
 
-declare global {
-  interface Window {
-    pwa_install: BeforeInstallPromptEvent | null
-  }
-  interface BeforeInstallPromptEvent extends Event {
-    readonly platforms: Array<string>
+// declare global {
+//   interface Window {
+//     pwa_install: BeforeInstallPromptEvent | null
+//   }
+//   interface BeforeInstallPromptEvent extends Event {
+//     readonly platforms: Array<string>
 
-    readonly userChoice: Promise<{
-      outcome: 'accepted' | 'dismissed'
-      platform: string
-    }>
+//     readonly userChoice: Promise<{
+//       outcome: 'accepted' | 'dismissed'
+//       platform: string
+//     }>
 
-    prompt(): Promise<void>
-  }
-}
+//     prompt(): Promise<void>
+//   }
+// }
 
 export default Vue.extend({
   name: 'Welcome',
@@ -306,7 +306,7 @@ export default Vue.extend({
   },
   computed: {
     native_os(): { name: string; ext: string; icon: string; color: string } {
-      console.log('pwa_install', window.pwa_install)
+      console.log('pwa_install', this.$pwa_install)
       if (this.$q.platform.is.android && !this.$q.platform.is.capacitor)
         return {
           name: 'Android',
@@ -321,7 +321,7 @@ export default Vue.extend({
           icon: 'fab fa-windows',
           color: 'light-blue-7'
         }
-      else if (window.pwa_install && window.pwa_install !== null) {
+      else if (this.$pwa_install && this.$pwa_install !== null) {
         console.log('PWA')
         return {
           name: 'Progressive Web App',
@@ -530,12 +530,12 @@ export default Vue.extend({
         )
       else if (
         ext === 'PWA' &&
-        window.pwa_install &&
-        window.pwa_install !== null
+        this.$pwa_install &&
+        this.$pwa_install !== null
       ) {
-        void window.pwa_install.prompt()
-        void window.pwa_install.userChoice.then(() => {
-          window.pwa_install = null
+        void this.$pwa_install.prompt()
+        void this.$pwa_install.userChoice.then(() => {
+          this.$pwa_install = null
         })
       }
     },

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">Bestdit - The best content from Reddit showcased in a single app.</string>
+    <string name="app_name">Bestdit</string>
     <string name="title_activity_main">Bestdit - The best content from Reddit showcased in a single app.</string>
     <string name="package_name">com.bestdit.app</string>
     <string name="custom_url_scheme">com.bestdit.app</string>

@@ -1,72 +1,113 @@
-# Bestdit (bestdit)
+<p align="center">
+  <a href="https://bestdit.vercel.app"><img src="https://github.com/nunogois/bestdit/blob/master/public/images/thumbnail.png?raw=true" /></a>
+<p>
 
-The best content from Reddit showcased in a single app.
+Bestdit is a very simple Reddit client, 100% cross-platform and open-source, built using [Quasar Framework](https://quasar.dev/) - A [VueJS](https://vuejs.org/) framework.
 
 Check it out here: https://bestdit.vercel.app/
 
-100% cross-platform with a single codebase.
+<p align="center">
+  <a href="https://github.com/nunogois/bestdit/blob/master/public/images/bestdit.gif?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/public/images/bestdit.gif?raw=true" height="300" /></a>
+</p>
 
-Made with [Quasar Framework](https://quasar.dev/) - A [VueJS](https://vuejs.org/) framework.
-
-## Features
+# ✨ Features
 
 - 100% cross-platform with a single open-source codebase
 - Welcome screen (Carousel)
 - Light / Dark theme
-- Configure subreddits
+- Get subreddit recommendations based on your interests
+- Configure subreddits manually
 - Infinite scroll
 - Pull down to refresh
-- i18n
-  - EN
-  - PT
+- Internationalization
+  - English
+  - Portuguese
 
-## Builds
+# 👨‍💻 &nbsp;Using
 
-Check [releases](https://github.com/nunogois/bestdit/releases).
-
-### [PWA (Progressive Web App - Web app that anyone can optionally install through the browser)](https://quasar.dev/quasar-cli/developing-pwa/introduction)
-
-<img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/chrome_pwa.jpg?raw=true" height="350" alt="Bestdit PWA on Google Chrome" /><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/chrome_mobile_pwa.jpg?raw=true" height="350" alt="Bestdit PWA on Google Chrome on mobile" />
-
-The images show Bestdit on Google Chrome, on desktop and mobile. On the desktop screenshot, in the top right corner you can see the default option to install the PWA. On the second image you can see "Add to Home screen" at the bottom.
-
-This is the default web app. You can "install" the PWA through the options on the right drawer.
-
-### [Capacitor (Mobile - Android, iOS)](https://quasar.dev/quasar-cli/developing-capacitor-apps/introduction)
-
-<img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/android_studio_emulator.jpg?raw=true" height="400" alt="Bestdit running on Android Studio emulator" />
-
-The image shows Bestdit running on Android Studio's emulator. You may try the app on your Android phone after installing the **.apk**.
-
-The apk is currently being built targetting Android SDK 29 (Android 10).
-
-I can't build iOS apps because I don't have a Mac at the moment. If you have one, simply follow the steps if you wish to build the app.
-
-### [Electron (Desktop - Windows, Linux, MacOS)](https://quasar.dev/quasar-cli/developing-electron-apps/introduction)
-
-<img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/windows_electron.jpg?raw=true" height="400" alt="Bestdit running on Windows" />
-
-The image shows Bestdit running on Windows after installing the **.exe**.
-
-I will only build for Windows because that's the platform I'm using at the moment. Feel free to build for other platforms.
-
-## Using
-
-- TypeScript
-- Vue-i18n
-- Axios
-- Sass (indented syntax)
-- ESLint
-- Prettier
-- Lottie
+![Quasar Framework](https://img.shields.io/badge/-Quasar%20Framework-141321?style=flat&logo=quasar&logoColor=1976D2)&nbsp;
+![Capacitor (Mobile)](<https://img.shields.io/badge/-Capacitor%20(Mobile)-141321?style=flat&logo=Capacitor&logoColor=119EFF>)&nbsp;
+![Electron (Desktop)](<https://img.shields.io/badge/-Electron%20(Desktop)-141321?style=flat&logo=Electron&logoColor=9feaf9>)&nbsp;
+![TypeScript](https://img.shields.io/badge/-TypeScript-141321?style=flat&logo=TypeScript&logoColor=3178C6)&nbsp;
+![Sass (indented syntax)](<https://img.shields.io/badge/-Sass%20(indented%20syntax)-141321?style=flat&logo=Sass&logoColor=CC6699>)&nbsp;
+![ESLint](https://img.shields.io/badge/-ESLint-141321?style=flat&logo=ESLint&logoColor=4B32C3)&nbsp;
+![Prettier](https://img.shields.io/badge/-Prettier-141321?style=flat&logo=Prettier&logoColor=F7B93E)&nbsp;
 
 ## Other
+
+- Vue-i18n
+- Axios
+- Lottie
 
 [Bestdit icon](https://www.flaticon.com/free-icon/trophy_3112946) made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
 
 Free animated illustrations from [LottieFiles](https://lottiefiles.com/)
 
-## To Do
+# 🔨 &nbsp;Builds
+
+## [PWA - Progressive Web App](https://quasar.dev/quasar-cli/developing-pwa/introduction)
+
+Progressive Web Apps are web apps that anyone can optionally install through the browser.
+
+This is the default web app that you see hosted on [Vercel](https://vercel.com/).
+
+<br />
+<p align="center">
+  Windows 10 + Google Chrome:
+  <br />
+  <a href="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/chrome_pwa.jpg?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/chrome_pwa.jpg?raw=true" height="150" /></a>
+  <br /><br />
+  Manjaro i3 (Arch-based) + Brave:
+  <br />
+  <a href="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/manjaro-i3.jpg?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/manjaro-i3.jpg?raw=true" height="150" /></a>
+  <br /><br />
+  Pop!_OS (Ubuntu-based) + Regolith + Google Chrome:
+  <br />
+  <a href="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/pop_os-regolith.jpg?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/pop_os-regolith.jpg?raw=true" height="150" /></a>
+  <br /><br />
+  We can even open the PWA through the launcher:
+  <br />
+  <a href="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/pop_os-regolith-launcher.jpg?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/pop_os-regolith-launcher.jpg?raw=true" height="150" /></a>
+  <br /><br />
+  Android 11 + Google Chrome (prompt at the bottom of the screen):
+  <br />
+  <a href="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/chrome_mobile_pwa.jpg?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/chrome_mobile_pwa.jpg?raw=true" height="150" /></a>
+  <br /><br />
+</p>
+
+## [Capacitor - Mobile (Android, iOS)](https://quasar.dev/quasar-cli/developing-capacitor-apps/introduction)
+
+With a simple command we can issue a mobile build from the same code base.
+
+Since I don't have a Mac with me at the moment, I've only built the Android version (APK).
+
+The APK is currently being built targeting Android SDK 29 - Android 10+.
+
+If you wish to build for iOS, simply follow the steps in the Quasar documentation.
+
+<br />
+<p align="center">
+  Android Studio emulator:
+  <br />
+  <a href="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/android_studio_emulator.jpg?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/android_studio_emulator.jpg?raw=true" height="150" /></a>
+</p>
+
+## [Electron - Desktop (Windows, Linux, macOS)](https://quasar.dev/quasar-cli/developing-electron-apps/introduction)
+
+With a simple command we can issue a desktop build from the same code base.
+
+Since I don't have a Mac with me at the moment, I've only built the Windows version (EXE) since that is what I'm using at the moment.
+
+If you wish to build for other platforms, simply follow the steps in the Quasar documentation.
+
+<br />
+<p align="center">
+  Windows 10:
+  <br />
+  <a href="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/windows_electron.jpg?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/windows_electron.jpg?raw=true" height="150" /></a>
+</p>
+
+# 📌 To Do
 
 - [x] Main page
 - [x] Main layout
@@ -98,3 +139,4 @@ Free animated illustrations from [LottieFiles](https://lottiefiles.com/)
 - [ ] Virtual scroll?
 - [ ] Share component
 - [ ] Auth
+- [ ] Improve Lighthouse score

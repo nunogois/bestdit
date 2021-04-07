@@ -50,7 +50,9 @@ export default Vue.extend({
   methods: {
     async load(reset = false) {
       const subs = this.$q.localStorage.getItem('bestdit_subs') as Array<string>
-      const query = subs.join().replace(/,/g, '+') + '/top.json?t=day'
+      let query = 'pics/top.json?t=day'
+      if (subs !== null)
+        query = subs.join().replace(/,/g, '+') + '/top.json?t=day'
 
       await this.$axios
         .get(`https://www.reddit.com/r/${query}${this.getAfter(reset)}`)
@@ -64,8 +66,6 @@ export default Vue.extend({
 
           if (reset) this.posts = posts
           else this.posts = this.posts.concat(posts)
-
-          console.log(this.posts)
 
           this.loading = false
         })

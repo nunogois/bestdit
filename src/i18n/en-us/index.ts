@@ -21,6 +21,7 @@ export default {
     add: 'Add subreddit',
     added: 'Subreddit r/{s} added successfully!',
     already_added: 'Subreddit r/{s} already in the list.',
+    discard: 'Discard',
     save: 'Save'
   },
   welcome: {

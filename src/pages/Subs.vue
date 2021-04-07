@@ -51,6 +51,16 @@
 
       <div class="q-mt-xl text-center">
         <q-btn
+          class="q-mr-md"
+          :label="$t('subs.discard')"
+          no-caps
+          outline
+          @click="discard"
+        >
+          <q-icon name="fas fa-times" class="q-ml-sm" size="15px" />
+        </q-btn>
+
+        <q-btn
           :label="$t('subs.save')"
           no-caps
           outline
@@ -58,7 +68,7 @@
           @click="save"
           :disabled="subs.length === 0"
         >
-          <q-icon name="fas fa-chevron-right" class="q-ml-sm" size="15px" />
+          <q-icon name="fas fa-save" class="q-ml-sm" size="15px" />
         </q-btn>
       </div>
     </div>
@@ -96,6 +106,7 @@ export default Vue.extend({
     const subs =
       (this.$q.localStorage.getItem('bestdit_subs') as Array<string>) || null
     if (subs !== null) this.subs = subs
+    else this.subs = ['pics']
   },
   methods: {
     add() {
@@ -118,6 +129,13 @@ export default Vue.extend({
     },
     remove(sub: string) {
       this.subs = this.subs.filter(s => s !== sub)
+    },
+    discard() {
+      const subs =
+        (this.$q.localStorage.getItem('bestdit_subs') as Array<string>) || null
+      if (subs !== null) this.subs = subs
+      else this.subs = ['pics']
+      void this.$router.replace('/')
     },
     save() {
       this.$q.localStorage.set('bestdit_subs', this.subs)

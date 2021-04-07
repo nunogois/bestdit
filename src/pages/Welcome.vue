@@ -455,7 +455,7 @@ export default Vue.extend({
         {
           label: this.$t('welcome.topics.programming'),
           value: 'programming',
-          subs: ['programminghumor', 'softwaregore', 'unixporn']
+          subs: ['programmerhumor', 'softwaregore', 'unixporn']
         },
         {
           label: this.$t('welcome.topics.videos'),
@@ -514,11 +514,11 @@ export default Vue.extend({
     download(ext: string) {
       if (ext === 'APK')
         openURL(
-          'https://github.com/nunogois/bestdit/releases/download/v0.1-beta/Bestdit.apk'
+          'https://github.com/nunogois/bestdit/releases/download/v1.0/Bestdit.apk'
         )
       else if (ext === 'EXE')
         openURL(
-          'https://github.com/nunogois/bestdit/releases/download/v0.1-beta/Bestdit.exe'
+          'https://github.com/nunogois/bestdit/releases/download/v1.0/Bestdit.exe'
         )
       else if (ext === 'PWA' && this.pwa_install && this.pwa_install !== null) {
         void this.pwa_install.prompt()

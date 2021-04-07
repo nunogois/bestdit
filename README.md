@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://bestdit.vercel.app"><img src="https://github.com/nunogois/bestdit/blob/master/public/images/thumbnail.png?raw=true" /></a>
+  <a href="https://bestdit.vercel.app"><img src="https://github.com/nunogois/bestdit/blob/master/public/images/thumbnail.png?raw=true" height="450" /></a>
 <p>
 
 Bestdit is a very simple Reddit client, 100% cross-platform and open-source, built using [Quasar Framework](https://quasar.dev/) - A [VueJS](https://vuejs.org/) framework.
@@ -7,7 +7,7 @@ Bestdit is a very simple Reddit client, 100% cross-platform and open-source, bui
 Check it out here: https://bestdit.vercel.app/
 
 <p align="center">
-  <a href="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/bestdit.gif?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/bestdit.gif?raw=true" height="300" /></a>
+  <a href="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/bestdit.gif?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/bestdit.gif?raw=true" height="600" /></a>
 </p>
 
 # ✨ Features
@@ -33,7 +33,7 @@ Check it out here: https://bestdit.vercel.app/
 ![ESLint](https://img.shields.io/badge/-ESLint-141321?style=flat&logo=ESLint&logoColor=4B32C3)&nbsp;
 ![Prettier](https://img.shields.io/badge/-Prettier-141321?style=flat&logo=Prettier&logoColor=F7B93E)&nbsp;
 
-## Other
+### And also...
 
 - Vue-i18n
 - Axios

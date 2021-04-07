@@ -3,14 +3,18 @@
 <p>
   
 <p align="center">
-  Bestdit is a very simple Reddit client, 100% cross-platform and open-source, built using <a href="https://quasar.dev/" target="_blank">Quasar Framework</a> - A <a href="https://vuejs.org/" target="_blank">VueJS</a> framework.
+  Bestdit is a very simple Reddit client, 100% cross-platform and open-source, built using <a href="https://quasar.dev/">Quasar Framework</a> - A <a href="https://vuejs.org/">VueJS</a> framework.
   <br /><br />
-  Check it out here: https://bestdit.vercel.app/
+  Check out Bestdit here: https://bestdit.vercel.app/
 </p>
+
+<br />
 
 <p align="center">
   <a href="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/bestdit.gif?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/bestdit.gif?raw=true" height="600" /></a>
 </p>
+
+<br />
 
 # ✨ Features
 
@@ -19,11 +23,14 @@
 - Light / Dark theme
 - Get subreddit recommendations based on your interests
 - Configure subreddits manually
+- All of the data is saved locally
 - Infinite scroll
 - Pull down to refresh
 - Internationalization
   - English
   - Portuguese
+
+<br />
 
 # 👨‍💻 &nbsp;Using
 
@@ -45,6 +52,8 @@
 
 Free animated illustrations from [LottieFiles](https://lottiefiles.com/)
 
+<br />
+
 # 🔨 &nbsp;Builds
 
 ## [PWA - Progressive Web App](https://quasar.dev/quasar-cli/developing-pwa/introduction)
@@ -54,6 +63,7 @@ Progressive Web Apps are web apps that anyone can optionally install through the
 This is the default web app that you see hosted on [Vercel](https://vercel.com/).
 
 <br />
+
 <p align="center">
   Windows 10 + Google Chrome:
   <br />
@@ -88,6 +98,7 @@ The APK is currently being built targeting Android SDK 29 - Android 10+.
 If you wish to build for iOS, simply follow the steps in the Quasar documentation.
 
 <br />
+
 <p align="center">
   Android Studio emulator:
   <br />
@@ -103,11 +114,14 @@ Since I don't have a Mac with me at the moment, I've only built the Windows vers
 If you wish to build for other platforms, simply follow the steps in the Quasar documentation.
 
 <br />
+
 <p align="center">
   Windows 10:
   <br />
   <a href="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/windows_electron.jpg?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/windows_electron.jpg?raw=true" height="150" /></a>
 </p>
+
+<br />
 
 # 📌 To Do
 

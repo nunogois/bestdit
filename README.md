@@ -93,7 +93,7 @@ With a simple command we can issue a mobile build from the same code base.
 
 Since I don't have a Mac with me at the moment, I've only built the Android version (APK).
 
-The APK is currently being built targeting Android SDK 29.
+The APK is currently being built targeting Android SDK 29. However, since it has a minSdkVersion parameter of 21, any Android 5.0+ should be able to run the app.
 
 If you wish to build for iOS, simply follow the steps in the Quasar documentation.
 

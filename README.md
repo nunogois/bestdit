@@ -67,23 +67,23 @@ This is the default web app that you see hosted on [Vercel](https://vercel.com/)
 <p align="center">
   Windows 10 + Google Chrome:
   <br />
-  <a href="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/chrome_pwa.jpg?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/chrome_pwa.jpg?raw=true" height="150" /></a>
+  <a href="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/chrome_pwa.jpg?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/chrome_pwa.jpg?raw=true" height="250" /></a>
   <br /><br />
   Manjaro i3 (Arch-based) + Brave:
   <br />
-  <a href="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/manjaro-i3.jpg?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/manjaro-i3.jpg?raw=true" height="150" /></a>
+  <a href="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/manjaro-i3.jpg?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/manjaro-i3.jpg?raw=true" height="250" /></a>
   <br /><br />
   Pop!_OS (Ubuntu-based) + Regolith + Google Chrome:
   <br />
-  <a href="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/pop_os-regolith.jpg?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/pop_os-regolith.jpg?raw=true" height="150" /></a>
+  <a href="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/pop_os-regolith.jpg?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/pop_os-regolith.jpg?raw=true" height="250" /></a>
   <br /><br />
   We can even open the PWA through the launcher:
   <br />
-  <a href="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/pop_os-regolith-launcher.jpg?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/pop_os-regolith-launcher.jpg?raw=true" height="150" /></a>
+  <a href="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/pop_os-regolith-launcher.jpg?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/pop_os-regolith-launcher.jpg?raw=true" height="250" /></a>
   <br /><br />
   Android 11 + Google Chrome (prompt at the bottom of the screen):
   <br />
-  <a href="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/chrome_mobile_pwa.jpg?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/chrome_mobile_pwa.jpg?raw=true" height="150" /></a>
+  <a href="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/chrome_mobile_pwa.jpg?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/chrome_mobile_pwa.jpg?raw=true" height="250" /></a>
   <br /><br />
 </p>
 
@@ -102,7 +102,7 @@ If you wish to build for iOS, simply follow the steps in the Quasar documentatio
 <p align="center">
   Android Studio emulator:
   <br />
-  <a href="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/android_studio_emulator.jpg?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/android_studio_emulator.jpg?raw=true" height="150" /></a>
+  <a href="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/android_studio_emulator.jpg?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/android_studio_emulator.jpg?raw=true" height="250" /></a>
 </p>
 
 ## [Electron - Desktop (Windows, Linux, macOS)](https://quasar.dev/quasar-cli/developing-electron-apps/introduction)
@@ -118,7 +118,7 @@ If you wish to build for other platforms, simply follow the steps in the Quasar 
 <p align="center">
   Windows 10:
   <br />
-  <a href="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/windows_electron.jpg?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/windows_electron.jpg?raw=true" height="150" /></a>
+  <a href="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/windows_electron.jpg?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/windows_electron.jpg?raw=true" height="250" /></a>
 </p>
 
 <br />

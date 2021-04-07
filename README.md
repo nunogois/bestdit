@@ -1,7 +1,9 @@
 <p align="center">
   <a href="https://bestdit.vercel.app"><img src="https://github.com/nunogois/bestdit/blob/master/public/images/thumbnail.png?raw=true" height="450" /></a>
   <br />
+  
   Bestdit is a very simple Reddit client, 100% cross-platform and open-source, built using [Quasar Framework](https://quasar.dev/) - A [VueJS](https://vuejs.org/) framework.
+  
   <br /><br />
   Check it out here: https://bestdit.vercel.app/
 <p>

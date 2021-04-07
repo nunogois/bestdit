@@ -7,7 +7,7 @@ Bestdit is a very simple Reddit client, 100% cross-platform and open-source, bui
 Check it out here: https://bestdit.vercel.app/
 
 <p align="center">
-  <a href="https://github.com/nunogois/bestdit/blob/master/public/images/bestdit.gif?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/public/images/bestdit.gif?raw=true" height="300" /></a>
+  <a href="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/bestdit.gif?raw=true"><img src="https://github.com/nunogois/bestdit/blob/master/demo_screenshots/bestdit.gif?raw=true" height="300" /></a>
 </p>
 
 # ✨ Features

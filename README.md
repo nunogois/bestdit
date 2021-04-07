@@ -145,7 +145,7 @@ If you wish to build for other platforms, simply follow the steps in the Quasar 
 - [x] Local storage
 - [x] Custom 404 page
 - [x] Add options to user drawer (on the right)
-- [x] Native version recommendation on Welcome
+- [x] Installable version recommendation on Welcome
 - [x] Subreddit configuration page
 - [x] Better scroll load on mobile
 - [ ] Better Reddit post support (external links, some videos, galleries and other embedded media are not working correctly)
